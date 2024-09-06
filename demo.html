@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        .menu {
+          float: left;
+          width: 20%;
+        }
+        .menuitem {
+          padding: 8px;
+          margin-top: 7px;
+          border-bottom: 1px solid #f1f1f1;
+        }
+        .main {
+          float: left;
+          width: 60%;
+          padding: 0 20px;
+          overflow: hidden;
+        }
+        .right {
+          background-color: lightblue;
+          float: left;
+          width: 20%;
+          padding: 10px 15px;
+          margin-top: 7px;
+        }
+        
+        @media only screen and (max-width:800px) {
+          /* For tablets: */
+          .main {
+            width: 80%;
+            padding: 0;
+          }
+          .right {
+            width: 100%;
+          }
+        }
+        @media only screen and (max-width:500px) {
+          /* For mobile phones: */
+          .menu, .main, .right {
+            width: 100%;
+          }
+        }
+    </style>
+-->
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    .left {
+      background-color: #2196F3;
+      padding: 20px;
+      float: left;
+      width: 20%; /* The width is 20%, by default */
+    }
+    
+    .main {
+      background-color: #f1f1f1;
+      padding: 20px;
+      float: left;
+      width: 60%; /* The width is 60%, by default */
+    }
+    
+    .right {
+      background-color: #04AA6D;
+      padding: 20px;
+      float: left;
+      width: 20%; /* The width is 20%, by default */
+    }
+    
+    /* Use a media query to add a break point at 800px: */
+    @media screen and (max-width: 800px) {
+      .left, .main, .right {
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+      }
+    }
+    </style>
+
+</head>
+<body style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+    <!--HTML Responsive Web Design
+    
+        Resonsive web design is about creating web pages that look good on 
+        all devices!
+
+        A responsive web design will automatically adjust for defferent screen
+        sizes and viewports.
+    -->
+
+    <!--What is Presponsive Web Design?
+    
+        Responsive Web Design is about using HTML and CSS to automatically
+        resize, hide, shrink, or enlarge, a website, to make it look good on all
+        devices (desktops, tablets, and phones):
+    -->
+
+    <!--
+    <div style="background-color:#f1f1f1;padding:15px;">
+        <h1>Cinque Terre</h1>
+        <h3>Resize the browser window</h3>
+      </div>
+      
+      <div style="overflow:auto">
+        <div class="menu">
+          <div class="menuitem">The Walk</div>
+          <div class="menuitem">Transport</div>
+          <div class="menuitem">History</div>
+          <div class="menuitem">Gallery</div>
+        </div>
+      
+        <div class="main">
+          <h2>The Walk</h2>
+          <p>The walk from Monterosso to Riomaggiore will take you approximately two hours, give or take an hour depending on the weather conditions and your physical shape.</p>
+          <img src="img_5terre.jpg" style="width:100%">
+        </div>
+      
+        <div class="right">
+          <h2>What?</h2>
+          <p>Cinque Terre comprises five villages: Monterosso, Vernazza, Corniglia, Manarola, and Riomaggiore.</p>
+          <h2>Where?</h2>
+          <p>On the northwest cost of the Italian Riviera, north of the city La Spezia.</p>
+          <h2>Price?</h2>
+          <p>The Walk is free!</p>
+        </div>
+      </div>
+      
+      
+      <div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> This web page is a part of a demonstration of fluid web design made by w3schools.com. Resize the browser window to see the content respond to the resizing.</div>
+      
+      <hr>
+     -->
+      <!--Setting The Viewport
+    
+        To create a responsive website, add the following <meta> tag to all your
+        web pages:
+
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+
+        This will set the viewport of your page, which will give the browser
+        insturctions on how to control  the page's dim ensions and scalling.
+    -->
+
+    <!--Respnsive images
+    
+        Responsive images are images that scale nicely to fit any browser size.
+
+        Using the width property
+
+        If the CSS width property is set to 100%, the image will be responsive and 
+        scale up and down:
+
+            <img src="img_girl.jpg" style="width: 100%;">
+    -->
+
+    <!--
+    <h2>Responsive Image</h2>
+    <p>When the CSS width property is set in a percentage value, the image will scale up and down when resizing the browser window. Resize the browser widndow to see the effect.</p>
+
+    <img src="img_girl.jpg" alt="Winter Outfit" style="width: 100%;">
+    -->
+
+    <!--Notice that in the example above, the image can be scaled up to be larger
+        than its original size. A better solution, in many cases, will be to use the
+        max-width property instead.
+    -->
+
+    <!--Using the max-width property
+    
+        if the max-width property is set to 100%, the image will scale down if it
+        has to, but never scale up to be larger than its original size:
+
+            <img src="img_girl.jpg." style="max-width: 100%; height: auto;">
+    -->
+
+    <!--Show Different Images Depending on Browser Width
+    
+        The HTML <picture> element allows you to define differnet images for
+        differnet browser windows sizes.
+
+        Resize the browser window to see how the image below changes depending
+        on the width:
+    -->
+    
+    <!--
+<h2>Show Different Images Depending on Browser Width</h2>
+<p>Resize the browser width and the image will change at 600px and 1500px.</p>
+
+<picture>
+  <source srcset="img_smallflower.jpg" media="(max-width: 600px)">
+  <source srcset="img_flowers.jpg" media="(max-width: 1500px)">
+  <source srcset="flowers.jpg">
+  <img src="img_flowers.jpg" alt="Flowers" style="width:auto;">
+</picture>
+-->
+
+<!--Responsive Text Size
+
+    The text size con be set with a "vw" unit, which means the "viewport width".
+
+    That way the text size will follow the size of the browser window:
+-->
+
+<!--Viewport is the browser window size. 1vw = 1% of viewport width. If the
+    viewport is 50cm wide, 1vw is 0.5cm.
+-->
+
+<!--Media Oueries
+
+    In addition to resize text and images, it is also common to use media queries
+    in responsive web pages.
+
+    With media queries you can define completely different styles for different
+    browser sizes.
+
+    Example: resize the browser window to see that the three div elements
+    below will display horizontally on large screens and stack veritcally on small
+    screens:
+-->
+
+<!--
+<h2>Media Queries</h2>
+<p>Resize the browser window.</p>
+
+<p>Make sure you reach the breakpoint at 800px when resizing this frame.</p>
+
+<div class="left">
+  <p>Left Menu</p>
+</div>
+
+<div class="main">
+  <p>Main Content</p>
+</div>
+
+<div class="right">
+  <p>Right Content</p>
+</div>
+
+<h2>Media Queries</h2>
+<p>Resize the browser window.</p>
+
+<p>Make sure you reach the breakpoint at 800px when resizing this frame.</p>
+
+<div class="left">
+  <p>Left Menu</p>
+</div>
+
+<div class="main">
+  <p>Main Content</p>
+</div>
+
+<div class="right">
+  <p>Right Content</p>
+</div>
+
+<hr>
+
+-->
+
+<!--A responsive web page should look good on large desktop screens and on 
+    scmall mobile phones.
+-->
+
+<div style="background-color:#e5e5e5;padding:15px;text-align:center;">
+    <h1>Hello World</h1>
+  </div>
+  
+  <div style="overflow:auto">
+    <div class="menu">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+      <a href="#">Link 4</a>
+    </div>
+  
+    <div class="main">
+      <h2>Lorum Ipsum</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    </div>
+  
+    <div class="right">
+      <h2>About</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    </div>
+  </div>
+  
+  <div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">© copyright w3schools.com</div>
+
+  <hr>
+
+  <!--Responsive Web Design - Frameworks
+
+    All popular CSS Frameworks offer responsive design.
+
+    They are free, and easy to use.
+-->
+
+
+</body>
+</html>
